@@ -24,10 +24,9 @@ override func viewDidLoad() {
     NotificationCenter.default.addObserver(self, selector: #selector(setLabels), name: Notification.Name(rawValue: "NameNotification"), object: nil)
 }
 
-func setLabels(notification: NSNotification){
-    print("Does this ever run?")
-    // Use the data from DataService.swift to initialize the Album.
-    let gameInfo = game(name: DataService.dataService.NAME_FROM_OUTPAN)
-    nameLabel.text = "\(gameInfo.name)"
-}
+    func setLabels(notification: NSNotification){
+        // Use the data from DataService.swift to initialize the Album.
+        let gameInfo = game(name: DataService.dataService.NAME_FROM_OUTPAN)
+        nameLabel.text = "\(gameInfo.name)"
+    }
 }

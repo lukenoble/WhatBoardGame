@@ -25,14 +25,12 @@ class DataService {
             .responseJSON { response in
                 
                 var json = JSON(response.result.value!)
-                
-                let gameName = "\(json[0]["name"])"
+                let gameName = "\(json["name"].stringValue)"
                 
                 self.dataService.NAME_FROM_OUTPAN = gameName
                 
                 // Post a notification to let AlbumDetailsViewController know we have some data.
                 NotificationCenter.default.post(name: Notification.Name(rawValue: "NameNotification"), object: nil)
-                print("Notification sent")
         }
     }
     
