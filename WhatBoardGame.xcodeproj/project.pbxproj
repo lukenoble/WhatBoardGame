@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3384817767886E00CD52CCB4 /* Pods_WhatBoardGameTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B864209FCDFB21D18805D3F /* Pods_WhatBoardGameTests.framework */; };
-		554D36DBE6DD5CADF7ED5064 /* Pods_WhatBoardGameUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A82EB2A365E34343887294C5 /* Pods_WhatBoardGameUITests.framework */; };
 		734532AC1D91EE8B004217E5 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734532AB1D91EE8B004217E5 /* DataService.swift */; };
 		734532AE1D91F12A004217E5 /* game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734532AD1D91F12A004217E5 /* game.swift */; };
 		734532B01D91F3FD004217E5 /* GameDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734532AF1D91F3FD004217E5 /* GameDetailsViewController.swift */; };
@@ -84,7 +82,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3384817767886E00CD52CCB4 /* Pods_WhatBoardGameTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,7 +89,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				554D36DBE6DD5CADF7ED5064 /* Pods_WhatBoardGameUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,12 +203,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 73703EF41D91C26800C0BE9D /* Build configuration list for PBXNativeTarget "WhatBoardGameTests" */;
 			buildPhases = (
-				EAE4269AE880F9E18B9EB9D8 /* [CP] Check Pods Manifest.lock */,
 				73703ED91D91C26800C0BE9D /* Sources */,
 				73703EDA1D91C26800C0BE9D /* Frameworks */,
 				73703EDB1D91C26800C0BE9D /* Resources */,
-				C8CB7D8EBC11BBD8AA8051B1 /* [CP] Embed Pods Frameworks */,
-				3A955434C43061BA63FFD71B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -228,11 +221,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 73703EF71D91C26800C0BE9D /* Build configuration list for PBXNativeTarget "WhatBoardGameUITests" */;
 			buildPhases = (
-				1D5A1C5C0560D2C415CC5B18 /* [CP] Check Pods Manifest.lock */,
 				73703EE41D91C26800C0BE9D /* Sources */,
 				73703EE51D91C26800C0BE9D /* Frameworks */,
 				73703EE61D91C26800C0BE9D /* Resources */,
-				92EE5FBB34924B5D8DCCFF6C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -321,21 +312,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1D5A1C5C0560D2C415CC5B18 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		2605B3F6DE311554BE3BF9B6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -349,21 +325,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		3A955434C43061BA63FFD71B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhatBoardGameTests/Pods-WhatBoardGameTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		453829CDF37D95762F81F4DD /* [CP] Copy Pods Resources */ = {
@@ -381,36 +342,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhatBoardGame/Pods-WhatBoardGame-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		92EE5FBB34924B5D8DCCFF6C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhatBoardGameUITests/Pods-WhatBoardGameUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C8CB7D8EBC11BBD8AA8051B1 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhatBoardGameTests/Pods-WhatBoardGameTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		EA22F2A1C356FA8E4873D8FE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -424,21 +355,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhatBoardGame/Pods-WhatBoardGame-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EAE4269AE880F9E18B9EB9D8 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -627,7 +543,6 @@
 		};
 		73703EF51D91C26800C0BE9D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0AD1D3C8C16E3B01F7FBB1FD /* Pods-WhatBoardGameTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = WhatBoardGameTests/Info.plist;
@@ -641,7 +556,6 @@
 		};
 		73703EF61D91C26800C0BE9D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AF904C3FBA3E6A281962D24E /* Pods-WhatBoardGameTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = WhatBoardGameTests/Info.plist;
@@ -655,7 +569,6 @@
 		};
 		73703EF81D91C26800C0BE9D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E3DA8C7B56BE69118736EB23 /* Pods-WhatBoardGameUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = WhatBoardGameUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -668,7 +581,6 @@
 		};
 		73703EF91D91C26800C0BE9D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91803A2801C9BEBCADFB081E /* Pods-WhatBoardGameUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = WhatBoardGameUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

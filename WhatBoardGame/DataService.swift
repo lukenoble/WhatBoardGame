@@ -21,12 +21,12 @@ class DataService {
         // The URL we will use to get out album data from Outpan
         let outpanurl = "\(OUTPAN_AUTH_URL)\(codeNumber)?apikey=\(OUTPAN_KEY)"
         
-        Alamofire.request(.GET, outpanurl)
+        Alamofire.request(outpanurl)
             .responseJSON { response in
                 
                 var json = JSON(response.result.value!)
                 
-                let gameName = "\(json["results"][0]["name"])"
+                let gameName = "\(json[0]["name"])"
                 
                 self.dataService.NAME_FROM_OUTPAN = gameName
                 
