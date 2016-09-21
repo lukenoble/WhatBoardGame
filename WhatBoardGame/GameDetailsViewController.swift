@@ -11,6 +11,7 @@ import UIKit
 class GameDetailsViewController : UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
+
     
 deinit {
     NotificationCenter.default.removeObserver(self)
@@ -26,7 +27,9 @@ override func viewDidLoad() {
 
     func setLabels(notification: NSNotification){
         // Use the data from DataService.swift to initialize the Album.
-        let gameInfo = game(name: DataService.dataService.NAME_FROM_OUTPAN)
-        nameLabel.text = "\(gameInfo.name)"
+        let gameInfo = Game(name: DataService.dataService.NAME_FROM_OUTPAN)
+        nameLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
+        nameLabel.numberOfLines = 0
+        nameLabel.text = "\(gameInfo.name!)"
     }
 }
