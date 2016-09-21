@@ -15,7 +15,7 @@ class game {
     init(name: String) {
         
         // Add a little extra text to the album information
-        self.name = "Name: \n\(name)"
+        self.name = "\(name)"
     }
     
 }
