@@ -111,14 +111,14 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
                 trimmedCodeNoZero = String(trimmedCodeString.characters.dropFirst())
                 
                 // Send the doctored UPC to DataService.searchAPI()
-                DataService.searchAPI(trimmedCodeNoZero)
+                DataService.searchAPI(codeNumber: trimmedCodeNoZero)
             } else {
                 
                 // Send the doctored EAN to DataService.searchAPI()
-                DataService.searchAPI(trimmedCodeString)
+                DataService.searchAPI(codeNumber: trimmedCodeString)
             }
             
-            self.navigationController?.popViewController(animated: true)
+          self.navigationController?.popViewController(animated: true)
         }))
         
         self.present(alert, animated: true, completion: nil)

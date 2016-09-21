@@ -16,7 +16,7 @@ class DataService {
     
     fileprivate(set) var NAME_FROM_OUTPAN = ""
     
-    static func searchAPI(_ codeNumber: String) {
+    static func searchAPI(codeNumber: String) {
         
         // The URL we will use to get out album data from Outpan
         let outpanurl = "\(OUTPAN_AUTH_URL)\(codeNumber)?apikey=\(OUTPAN_KEY)"
@@ -32,6 +32,7 @@ class DataService {
                 
                 // Post a notification to let AlbumDetailsViewController know we have some data.
                 NotificationCenter.default.post(name: Notification.Name(rawValue: "NameNotification"), object: nil)
+                print("Notification sent")
         }
     }
     
