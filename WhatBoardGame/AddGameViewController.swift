@@ -10,8 +10,15 @@ import Foundation
 import UIKit
 class AddGameViewController : UIViewController {
     
-    @IBOutlet weak var nameLabel: UILabel!
-
+    //MARK: UI Elements
+    @IBOutlet weak var gameTitleTextField: UITextField!
+    @IBOutlet weak var minPlayersTextField: UITextField!
+    @IBOutlet weak var maxPlayersTextField: UITextField!
+    @IBOutlet weak var averagePlaytimeTextField: UITextField!
+    @IBOutlet weak var barcodeTextField: UITextField!
+    @IBAction func addToCollectionButton(_ sender: AnyObject) {
+    }
+    
     
 deinit {
     NotificationCenter.default.removeObserver(self)
@@ -20,16 +27,14 @@ deinit {
 override func viewDidLoad() {
     super.viewDidLoad()
     
-    nameLabel.text = "Let's scan a game!"
-    
     NotificationCenter.default.addObserver(self, selector: #selector(setLabels), name: Notification.Name(rawValue: "NameNotification"), object: nil)
 }
 
     func setLabels(notification: NSNotification){
         // Use the data from DataService.swift to initialize the Album.
         let gameInfo = Game(name: DataService.dataService.NAME_FROM_OUTPAN)
-        nameLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
-        nameLabel.numberOfLines = 0
-        nameLabel.text = "\(gameInfo.name!)"
+//        nameLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
+//        nameLabel.numberOfLines = 0
+//        nameLabel.text = "\(gameInfo.name!)"
     }
 }
