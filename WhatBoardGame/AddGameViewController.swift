@@ -12,8 +12,6 @@ import CoreData
 
 class AddGameViewController : UIViewController {
     
-    var game = [NSManagedObject]()
-    
     //MARK: UI Elements
     @IBOutlet weak var gameTitleTextField: UITextField!
     @IBOutlet weak var minPlayersTextField: UITextField!
@@ -21,27 +19,36 @@ class AddGameViewController : UIViewController {
     @IBOutlet weak var averagePlaytimeTextField: UITextField!
     @IBOutlet weak var barcodeTextField: UITextField!
     @IBAction func addToCollectionButton(_ sender: AnyObject) {
-        savePerson(gameTitle: gameTitleTextField.text!, andMinPlayers: Int(minPlayersTextField.text!)!, andMaxPlayers: Int(maxPlayersTextField.text!)!, andAveragePlaytime: Int(averagePlaytimeTextField.text!)!, andBarcode: barcodeTextField.text!)
+        let saveArray = prepareForSave()
+        saveGame(gameArray: saveArray)
+    }
+    
+    func prepareForSave () -> Array<Any> {
+        var saveArray : [AnyObject] = Array()
+        saveArray.append(gameTitleTextField.text as AnyObject)
+        saveArray.append(Int(minPlayersTextField.text!) as AnyObject)
+        saveArray.append(Int(maxPlayersTextField.text!) as AnyObject)
+        saveArray.append(Int(averagePlaytimeTextField.text!) as AnyObject)
+        saveArray.append(barcodeTextField.text as AnyObject)
+        return saveArray
     }
     
     //MARK: Save Data
-    func savePerson(gameTitle: String, andMinPlayers: Int, andMaxPlayers: Int, andAveragePlaytime: Int, andBarcode: String) {
+    func saveGame(gameArray: Array<Any>) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
         let entity =  NSEntityDescription.entity(forEntityName: "GameInCollection", in:managedContext)
         let gameToSave = NSManagedObject(entity: entity!, insertInto: managedContext)
-        gameToSave.setValue(gameTitle, forKey: "gametitle")
-        gameToSave.setValue(andMinPlayers, forKey: "minplayers")
-        gameToSave.setValue(andMaxPlayers, forKey: "maxplayers")
-        gameToSave.setValue(andAveragePlaytime, forKey: "averageplaytime")
-        gameToSave.setValue(andBarcode, forKey: "barcode")
+        gameToSave.setValue(gameArray[0] as! String, forKey: "gametitle")
+        gameToSave.setValue(gameArray[1] as! Int, forKey: "minplayers")
+        gameToSave.setValue(gameArray[2] as! Int, forKey: "maxplayers")
+        gameToSave.setValue(gameArray[3] as! Int, forKey: "averageplaytime")
+        gameToSave.setValue(gameArray[4] as! String, forKey: "barcode")
         do {
             try managedContext.save()
-            game.append(gameToSave)
         } catch let error as NSError  {
             print("Could not save \(error), \(error.userInfo)")
         }
-        print(game)
     }
     
     deinit {
