@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		734532AC1D91EE8B004217E5 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734532AB1D91EE8B004217E5 /* DataService.swift */; };
-		734532AE1D91F12A004217E5 /* game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734532AD1D91F12A004217E5 /* game.swift */; };
+		734532AE1D91F12A004217E5 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734532AD1D91F12A004217E5 /* Game.swift */; };
 		734532B01D91F3FD004217E5 /* GameDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734532AF1D91F3FD004217E5 /* GameDetailsViewController.swift */; };
 		73703ECA1D91C26800C0BE9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73703EC91D91C26800C0BE9D /* AppDelegate.swift */; };
-		73703ECC1D91C26800C0BE9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73703ECB1D91C26800C0BE9D /* ViewController.swift */; };
+		73703ECC1D91C26800C0BE9D /* BarcodeReaderScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73703ECB1D91C26800C0BE9D /* BarcodeReaderScreen.swift */; };
 		73703ECF1D91C26800C0BE9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73703ECD1D91C26800C0BE9D /* Main.storyboard */; };
 		73703ED21D91C26800C0BE9D /* WhatBoardGame.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 73703ED01D91C26800C0BE9D /* WhatBoardGame.xcdatamodeld */; };
 		73703ED41D91C26800C0BE9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73703ED31D91C26800C0BE9D /* Assets.xcassets */; };
@@ -44,11 +44,11 @@
 		11DA115FAAA7BB93883B4862 /* Pods-WhatBoardGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatBoardGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhatBoardGame/Pods-WhatBoardGame.release.xcconfig"; sourceTree = "<group>"; };
 		6B864209FCDFB21D18805D3F /* Pods_WhatBoardGameTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatBoardGameTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		734532AB1D91EE8B004217E5 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
-		734532AD1D91F12A004217E5 /* game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = game.swift; sourceTree = "<group>"; };
+		734532AD1D91F12A004217E5 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		734532AF1D91F3FD004217E5 /* GameDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDetailsViewController.swift; sourceTree = "<group>"; };
 		73703EC61D91C26800C0BE9D /* WhatBoardGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatBoardGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73703EC91D91C26800C0BE9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		73703ECB1D91C26800C0BE9D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		73703ECB1D91C26800C0BE9D /* BarcodeReaderScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeReaderScreen.swift; sourceTree = "<group>"; };
 		73703ECE1D91C26800C0BE9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		73703ED11D91C26800C0BE9D /* WhatBoardGame.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WhatBoardGame.xcdatamodel; sourceTree = "<group>"; };
 		73703ED31D91C26800C0BE9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -144,9 +144,9 @@
 			isa = PBXGroup;
 			children = (
 				73703EC91D91C26800C0BE9D /* AppDelegate.swift */,
-				73703ECB1D91C26800C0BE9D /* ViewController.swift */,
+				73703ECB1D91C26800C0BE9D /* BarcodeReaderScreen.swift */,
 				734532AB1D91EE8B004217E5 /* DataService.swift */,
-				734532AD1D91F12A004217E5 /* game.swift */,
+				734532AD1D91F12A004217E5 /* Game.swift */,
 				734532AF1D91F3FD004217E5 /* GameDetailsViewController.swift */,
 				73703EFA1D91C75200C0BE9D /* Constants.swift */,
 				73703ECD1D91C26800C0BE9D /* Main.storyboard */,
@@ -366,9 +366,9 @@
 			files = (
 				73703ED21D91C26800C0BE9D /* WhatBoardGame.xcdatamodeld in Sources */,
 				734532B01D91F3FD004217E5 /* GameDetailsViewController.swift in Sources */,
-				73703ECC1D91C26800C0BE9D /* ViewController.swift in Sources */,
+				73703ECC1D91C26800C0BE9D /* BarcodeReaderScreen.swift in Sources */,
 				73703ECA1D91C26800C0BE9D /* AppDelegate.swift in Sources */,
-				734532AE1D91F12A004217E5 /* game.swift in Sources */,
+				734532AE1D91F12A004217E5 /* Game.swift in Sources */,
 				73703EFB1D91C75200C0BE9D /* Constants.swift in Sources */,
 				734532AC1D91EE8B004217E5 /* DataService.swift in Sources */,
 			);

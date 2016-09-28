@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  BarcodeReader.swift
 //  WhatBoardGame
 //
 //  Created by Luke Noble on 20/09/2016.
