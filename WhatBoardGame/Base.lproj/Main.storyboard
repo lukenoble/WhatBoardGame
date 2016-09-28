@@ -22,10 +22,10 @@
             </objects>
             <point key="canvasLocation" x="-1617" y="261"/>
         </scene>
-        <!--Game Details View Controller-->
+        <!--Add Game View Controller-->
         <scene sceneID="C6f-rh-Ktt">
             <objects>
-                <viewController id="97a-T3-UDc" customClass="GameDetailsViewController" customModule="WhatBoardGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="97a-T3-UDc" customClass="AddGameViewController" customModule="WhatBoardGame" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IVo-7H-BzJ"/>
                         <viewControllerLayoutGuide type="bottom" id="uua-D5-W1X"/>
@@ -59,6 +59,24 @@
             </objects>
             <point key="canvasLocation" x="-229.59999999999999" y="262.21889055472263"/>
         </scene>
+        <!--Results View Controller-->
+        <scene sceneID="kv1-Xo-j44">
+            <objects>
+                <viewController id="EkA-Hi-bkR" customClass="ResultsViewController" customModule="WhatBoardGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f5w-C4-dRG"/>
+                        <viewControllerLayoutGuide type="bottom" id="mpo-1X-N3b"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rea-aw-jJa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HNs-aW-BMB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-231" y="901"/>
+        </scene>
         <!--Barcode Reader Screen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -76,6 +94,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="454" y="262"/>
+        </scene>
+        <!--Edit Collection View Controller-->
+        <scene sceneID="ONd-YI-Fpg">
+            <objects>
+                <viewController id="SwH-4o-6BG" customClass="EditCollectionViewController" customModule="WhatBoardGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Ee-Qj-N9M"/>
+                        <viewControllerLayoutGuide type="bottom" id="9cB-pe-gyP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6YD-fB-Obu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="57N-OT-9QI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-230" y="-384"/>
         </scene>
         <!--Game Picker View Controller-->
         <scene sceneID="52W-uy-ZhC">
@@ -142,7 +178,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="ROX-oE-Yq1">
-                        <barButtonItem key="leftBarButtonItem" title="Edit collection" id="6SZ-Gs-Kaq"/>
+                        <barButtonItem key="leftBarButtonItem" title="Edit collection" id="6SZ-Gs-Kaq">
+                            <connections>
+                                <segue destination="SwH-4o-6BG" kind="show" id="7Rz-23-cre"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Add game" id="sHk-6I-2MK">
                             <connections>
                                 <segue destination="97a-T3-UDc" kind="show" id="3Hh-C4-04u"/>
@@ -153,6 +193,7 @@
                         <outlet property="numberOfPeopleStepper" destination="M5P-mA-FtH" id="qMr-sx-NGa"/>
                         <outlet property="numberofPeopleLabel" destination="6l4-2m-CI5" id="k6M-wv-uGK"/>
                         <outlet property="timeSegmentedControl" destination="TPD-aj-tzg" id="usR-kL-bnO"/>
+                        <segue destination="EkA-Hi-bkR" kind="show" identifier="pickMyGameSegue" id="ctO-jJ-viK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zsm-5u-qFp" userLabel="First Responder" sceneMemberID="firstResponder"/>

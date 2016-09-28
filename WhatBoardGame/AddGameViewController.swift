@@ -1,5 +1,5 @@
 //
-//  GameDetailsViewController.swift
+//  AddGameViewController.swift
 //  WhatBoardGame
 //
 //  Created by Luke Noble on 20/09/2016.
@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-class GameDetailsViewController : UIViewController {
+class AddGameViewController : UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
 

@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		7311A38F1D9BDD7B0099D156 /* GamePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7311A38E1D9BDD7B0099D156 /* GamePickerViewController.swift */; };
+		7311A3911D9BFB670099D156 /* EditCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7311A3901D9BFB670099D156 /* EditCollectionViewController.swift */; };
+		7311A3931D9BFB950099D156 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7311A3921D9BFB950099D156 /* ResultsViewController.swift */; };
 		734532AC1D91EE8B004217E5 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734532AB1D91EE8B004217E5 /* DataService.swift */; };
 		734532AE1D91F12A004217E5 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734532AD1D91F12A004217E5 /* Game.swift */; };
-		734532B01D91F3FD004217E5 /* GameDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734532AF1D91F3FD004217E5 /* GameDetailsViewController.swift */; };
+		734532B01D91F3FD004217E5 /* AddGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734532AF1D91F3FD004217E5 /* AddGameViewController.swift */; };
 		73703ECA1D91C26800C0BE9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73703EC91D91C26800C0BE9D /* AppDelegate.swift */; };
 		73703ECC1D91C26800C0BE9D /* BarcodeReaderScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73703ECB1D91C26800C0BE9D /* BarcodeReaderScreen.swift */; };
 		73703ECF1D91C26800C0BE9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73703ECD1D91C26800C0BE9D /* Main.storyboard */; };
@@ -45,9 +47,11 @@
 		11DA115FAAA7BB93883B4862 /* Pods-WhatBoardGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatBoardGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhatBoardGame/Pods-WhatBoardGame.release.xcconfig"; sourceTree = "<group>"; };
 		6B864209FCDFB21D18805D3F /* Pods_WhatBoardGameTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatBoardGameTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7311A38E1D9BDD7B0099D156 /* GamePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePickerViewController.swift; sourceTree = "<group>"; };
+		7311A3901D9BFB670099D156 /* EditCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditCollectionViewController.swift; sourceTree = "<group>"; };
+		7311A3921D9BFB950099D156 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		734532AB1D91EE8B004217E5 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		734532AD1D91F12A004217E5 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		734532AF1D91F3FD004217E5 /* GameDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDetailsViewController.swift; sourceTree = "<group>"; };
+		734532AF1D91F3FD004217E5 /* AddGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGameViewController.swift; sourceTree = "<group>"; };
 		73703EC61D91C26800C0BE9D /* WhatBoardGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatBoardGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73703EC91D91C26800C0BE9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73703ECB1D91C26800C0BE9D /* BarcodeReaderScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeReaderScreen.swift; sourceTree = "<group>"; };
@@ -150,9 +154,11 @@
 				734532AB1D91EE8B004217E5 /* DataService.swift */,
 				7311A38E1D9BDD7B0099D156 /* GamePickerViewController.swift */,
 				734532AD1D91F12A004217E5 /* Game.swift */,
-				734532AF1D91F3FD004217E5 /* GameDetailsViewController.swift */,
+				734532AF1D91F3FD004217E5 /* AddGameViewController.swift */,
 				73703EFA1D91C75200C0BE9D /* Constants.swift */,
 				73703ECD1D91C26800C0BE9D /* Main.storyboard */,
+				7311A3921D9BFB950099D156 /* ResultsViewController.swift */,
+				7311A3901D9BFB670099D156 /* EditCollectionViewController.swift */,
 				73703ED31D91C26800C0BE9D /* Assets.xcassets */,
 				73703ED51D91C26800C0BE9D /* LaunchScreen.storyboard */,
 				73703ED81D91C26800C0BE9D /* Info.plist */,
@@ -369,8 +375,10 @@
 			files = (
 				7311A38F1D9BDD7B0099D156 /* GamePickerViewController.swift in Sources */,
 				73703ED21D91C26800C0BE9D /* WhatBoardGame.xcdatamodeld in Sources */,
-				734532B01D91F3FD004217E5 /* GameDetailsViewController.swift in Sources */,
+				734532B01D91F3FD004217E5 /* AddGameViewController.swift in Sources */,
+				7311A3931D9BFB950099D156 /* ResultsViewController.swift in Sources */,
 				73703ECC1D91C26800C0BE9D /* BarcodeReaderScreen.swift in Sources */,
+				7311A3911D9BFB670099D156 /* EditCollectionViewController.swift in Sources */,
 				73703ECA1D91C26800C0BE9D /* AppDelegate.swift in Sources */,
 				734532AE1D91F12A004217E5 /* Game.swift in Sources */,
 				73703EFB1D91C75200C0BE9D /* Constants.swift in Sources */,
