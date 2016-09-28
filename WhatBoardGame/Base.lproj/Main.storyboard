@@ -97,7 +97,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6l4-2m-CI5">
-                                <frame key="frameInset" minX="126" minY="132" width="8" height="21"/>
+                                <frame key="frameInset" minX="126" minY="132" width="30" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -106,6 +106,9 @@
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="99" translatesAutoresizingMaskIntoConstraints="NO" id="M5P-mA-FtH">
                                 <frame key="frameInset" minX="163" minY="128" width="94" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="numberOfPeopleStepper:" destination="rfX-6Y-43c" eventType="valueChanged" id="akE-o1-EWI"/>
+                                </connections>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How much time do you have to play?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qza-iH-aex">
                                 <frame key="frameInset" minX="16" minY="179" width="343" height="21"/>
@@ -131,6 +134,9 @@
                                 <state key="normal" title="Pick my game">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="pickMyGameButton:" destination="rfX-6Y-43c" eventType="touchUpInside" id="RWU-Tg-LHz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -143,6 +149,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="numberOfPeopleStepper" destination="M5P-mA-FtH" id="qMr-sx-NGa"/>
+                        <outlet property="numberofPeopleLabel" destination="6l4-2m-CI5" id="k6M-wv-uGK"/>
+                        <outlet property="timeSegmentedControl" destination="TPD-aj-tzg" id="usR-kL-bnO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zsm-5u-qFp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
