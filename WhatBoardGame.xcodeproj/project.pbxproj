@@ -22,6 +22,7 @@
 		73703EE21D91C26800C0BE9D /* WhatBoardGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73703EE11D91C26800C0BE9D /* WhatBoardGameTests.swift */; };
 		73703EED1D91C26800C0BE9D /* WhatBoardGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73703EEC1D91C26800C0BE9D /* WhatBoardGameUITests.swift */; };
 		73703EFB1D91C75200C0BE9D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73703EFA1D91C75200C0BE9D /* Constants.swift */; };
+		73BF95851D9EB81B00D6F4CA /* AddGameViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BF95841D9EB81B00D6F4CA /* AddGameViewControllerTests.swift */; };
 		EC619EA518BFE764DABEED8F /* Pods_WhatBoardGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A67FC69B42ABDB0011E5DE7F /* Pods_WhatBoardGame.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		73703EEC1D91C26800C0BE9D /* WhatBoardGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatBoardGameUITests.swift; sourceTree = "<group>"; };
 		73703EEE1D91C26800C0BE9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73703EFA1D91C75200C0BE9D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		73BF95841D9EB81B00D6F4CA /* AddGameViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGameViewControllerTests.swift; sourceTree = "<group>"; };
 		91803A2801C9BEBCADFB081E /* Pods-WhatBoardGameUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatBoardGameUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhatBoardGameUITests/Pods-WhatBoardGameUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9C7EA3788BF2DE2FE20802B7 /* Pods-WhatBoardGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatBoardGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhatBoardGame/Pods-WhatBoardGame.debug.xcconfig"; sourceTree = "<group>"; };
 		A67FC69B42ABDB0011E5DE7F /* Pods_WhatBoardGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatBoardGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				73703EE11D91C26800C0BE9D /* WhatBoardGameTests.swift */,
+				73BF95841D9EB81B00D6F4CA /* AddGameViewControllerTests.swift */,
 				73703EE31D91C26800C0BE9D /* Info.plist */,
 			);
 			path = WhatBoardGameTests;
@@ -390,6 +393,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73BF95851D9EB81B00D6F4CA /* AddGameViewControllerTests.swift in Sources */,
 				73703EE21D91C26800C0BE9D /* WhatBoardGameTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

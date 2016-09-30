@@ -145,6 +145,7 @@
                         <outlet property="gameTitleTextField" destination="qdq-HH-o6I" id="kwL-5I-fFe"/>
                         <outlet property="maxPlayersTextField" destination="gEd-bv-Sef" id="4nZ-rW-ZWP"/>
                         <outlet property="minPlayersTextField" destination="e2w-xn-Bqn" id="ay0-ti-ivb"/>
+                        <segue destination="rfX-6Y-43c" kind="show" identifier="addToCollectionSegue" id="eH7-Li-5FG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G1b-4N-4wt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -293,4 +294,7 @@
             <point key="canvasLocation" x="-927" y="260"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="eH7-Li-5FG"/>
+    </inferredMetricsTieBreakers>
 </document>
