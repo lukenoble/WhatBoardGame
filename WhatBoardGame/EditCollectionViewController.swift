@@ -59,16 +59,9 @@ class EditCollectionViewController : UIViewController, UITableViewDataSource {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        //1
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        
         let managedContext = appDelegate.managedObjectContext
-        
-        //2
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "GameInCollection")
-        
-        //3
         do {
             let results =
                 try managedContext.fetch(fetchRequest)
