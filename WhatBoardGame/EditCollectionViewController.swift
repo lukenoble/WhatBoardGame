@@ -30,6 +30,26 @@ class EditCollectionViewController : UIViewController, UITableViewDataSource {
         
         return cell!
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.delete) {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let managedContext = appDelegate.managedObjectContext
+            managedContext.delete(games[indexPath.row])
+            games.remove(at: indexPath.row)
+            let sections = NSIndexSet(index: 0)
+            tableView.reloadSections(sections as IndexSet, with: .fade)
+            do {
+                try managedContext.save()
+            } catch let error as NSError {
+                print("Cound not delete \(error), \(error.userInfo)")
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +73,6 @@ class EditCollectionViewController : UIViewController, UITableViewDataSource {
             let results =
                 try managedContext.fetch(fetchRequest)
             games = results as! [NSManagedObject]
-            print(games.count)
         } catch let error as NSError {
             print("Could not fetch \(error), \(error.userInfo)")
         }
