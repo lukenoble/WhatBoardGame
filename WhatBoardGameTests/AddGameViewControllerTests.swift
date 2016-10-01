@@ -23,8 +23,6 @@ class AddGameViewControllerTests: XCTestCase {
     }
     
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
         let title = "Monopoly"
         let minPlayers = "2"
         let maxPlayers = "5"

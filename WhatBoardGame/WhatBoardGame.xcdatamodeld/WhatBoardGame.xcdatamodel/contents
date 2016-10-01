@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="16A323" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="GameInCollection" syncable="YES">
+    <entity name="GameInCollection" representedClassName="" syncable="YES">
         <attribute name="averageplaytime" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="barcode" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="gametitle" optional="YES" attributeType="String" syncable="YES"/>
