@@ -21,6 +21,13 @@ class GamePickerViewController : UIViewController {
     
     //MARK: Pick my game button
     @IBAction func pickMyGameButton(_ sender: AnyObject) {
+        self.performSegue(withIdentifier: "pickMyGameSegue", sender: self)
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "pickMyGameSegue") {
+            if let dest = segue.destination as? ResultsViewController {
+                dest.numberOfPlayersPicked = Int(numberOfPeopleStepper.value)
+            }
+        }
+    }
 }
