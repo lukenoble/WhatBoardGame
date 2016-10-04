@@ -13,15 +13,20 @@ import CoreData
 class ResultsViewController : UIViewController {
     var games = [NSManagedObject]()
     var numberOfPlayersPicked : Int = 1
+    var minTime : Int = 0
+    var maxTime : Int = 30
     @IBOutlet weak var whatGameLabel: UILabel!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         let numberOfPlayers = numberOfPlayersPicked
+        let minTimeForPredicate = minTime
+        let maxTimeForPredicate = maxTime
+        let gameTime = "averageplaytime"
         let minPlayers = "minplayers"
         let maxPlayers = "maxplayers"
-        let idPredicate = NSPredicate(format: "%K <= %D && %K >= %D", minPlayers, numberOfPlayers, maxPlayers, numberOfPlayers)
+        let idPredicate = NSPredicate(format: "%K <= %D && %K >= %D && %K >= %D && %K <= %D", minPlayers, numberOfPlayers, maxPlayers, numberOfPlayers, gameTime, minTimeForPredicate, gameTime, maxTimeForPredicate)
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext

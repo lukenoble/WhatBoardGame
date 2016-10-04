@@ -287,6 +287,9 @@
                                     <segment title="60-120 mins"/>
                                     <segment title="120 mins+"/>
                                 </segments>
+                                <connections>
+                                    <action selector="timeControlChanged:" destination="rfX-6Y-43c" eventType="valueChanged" id="vey-K7-spz"/>
+                                </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGP-fg-eVJ">
                                 <frame key="frameInset" minX="100" minY="272" width="171" height="30"/>
