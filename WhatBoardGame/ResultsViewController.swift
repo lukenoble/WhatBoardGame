@@ -26,22 +26,34 @@ class ResultsViewController : UIViewController {
         let gameTime = "averageplaytime"
         let minPlayers = "minplayers"
         let maxPlayers = "maxplayers"
-        let idPredicate = NSPredicate(format: "%K <= %D && %K >= %D && %K >= %D && %K <= %D", minPlayers, numberOfPlayers, maxPlayers, numberOfPlayers, gameTime, minTimeForPredicate, gameTime, maxTimeForPredicate)
-        
+        let minPlayersPredicate = NSPredicate(format: "%K <= %D", minPlayers, numberOfPlayers)
+        let maxPlayersPredicate = NSPredicate(format: "%K >= %D", maxPlayers, numberOfPlayers)
+        let minTimePredicate = NSPredicate(format: "%K >= %D", gameTime, minTimeForPredicate)
+        let maxTimePredicate = NSPredicate(format: "%K <= %D", gameTime, maxTimeForPredicate)
+        let andPredicate = NSCompoundPredicate.init(andPredicateWithSubpredicates: [minPlayersPredicate, maxPlayersPredicate, minTimePredicate, maxTimePredicate])
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "GameInCollection")
-        fetchRequest.predicate = idPredicate
+        fetchRequest.predicate = andPredicate
         do {
             let results =
                 try managedContext.fetch(fetchRequest)
             games = results as! [NSManagedObject]
+            youShouldPlayDecider()
+            print(games.count)
         } catch let error as NSError {
             print("Could not fetch \(error), \(error.userInfo)")
         }
-        let game = games[0]
-        let name = game.value(forKey: "gametitle") as? String
-        whatGameLabel.text = "\(name!)"
+    }
+    
+    func youShouldPlayDecider() {
+        if games.count > 0 {
+            let game = games[0]
+            let name = game.value(forKey: "gametitle") as? String
+            whatGameLabel.text = "\(name!)"
+        } else {
+            whatGameLabel.text = "You own no suitable games"
+        }
     }
     
 }

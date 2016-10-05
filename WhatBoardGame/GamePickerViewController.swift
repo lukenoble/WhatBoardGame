@@ -18,7 +18,7 @@ class GamePickerViewController : UIViewController {
     }
     //MARK: How much time do you have to play? Control
     var minTime = 0
-    var maxTime = 10
+    var maxTime = 30
     @IBOutlet weak var timeSegmentedControl: UISegmentedControl!
     @IBAction func timeControlChanged(_ sender: AnyObject) {
         switch timeSegmentedControl.selectedSegmentIndex
@@ -34,7 +34,7 @@ class GamePickerViewController : UIViewController {
             maxTime = 120
         case 3:
             minTime = 120
-            maxTime = 9999
+            maxTime = 999
         default:
             break; 
         }
