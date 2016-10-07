@@ -40,15 +40,15 @@ class ResultsViewController : UIViewController {
                 try managedContext.fetch(fetchRequest)
             games = results as! [NSManagedObject]
             youShouldPlayDecider()
-            print(games.count)
         } catch let error as NSError {
             print("Could not fetch \(error), \(error.userInfo)")
         }
     }
     
     func youShouldPlayDecider() {
+        let randomNumber = Int(arc4random_uniform(UInt32(games.count)))
         if games.count > 0 {
-            let game = games[0]
+            let game = games[randomNumber]
             let name = game.value(forKey: "gametitle") as? String
             whatGameLabel.text = "\(name!)"
         } else {

@@ -22,14 +22,4 @@ class AddGameViewControllerTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        let title = "Monopoly"
-        let minPlayers = "2"
-        let maxPlayers = "5"
-        let averagePlaytime = "120"
-        let barcode = "12345"
-        let testData = vc?.prepareForSave(title: title, minPlayers: minPlayers, maxPlayers: maxPlayers, averagePlaytime: averagePlaytime, barcode: barcode)
-        XCTAssert(testData! == ["Monopoly", "2", "5", "120", "12345"], "The arrays are not the same")
-    }
-    
 }
