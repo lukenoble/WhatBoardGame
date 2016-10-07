@@ -10,7 +10,7 @@ import Foundation
 
 class Game {
     
-    fileprivate(set) var name: String!
+    private(set) var name: String!
     
     init(name: String) {
         

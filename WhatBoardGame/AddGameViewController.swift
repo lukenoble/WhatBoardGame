@@ -55,6 +55,6 @@ class AddGameViewController : UIViewController {
     func setLabels(notification: NSNotification){
         // Use the data from DataService.swift to initialize the Game.
         let gameInfo = Game(name: DataService.dataService.NAME_FROM_OUTPAN)
-        gameTitleTextField.text = "\(gameInfo)"
+        gameTitleTextField.text = "\(gameInfo.name!)"
     }
 }

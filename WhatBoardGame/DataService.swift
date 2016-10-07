@@ -14,7 +14,7 @@ class DataService {
     
     static let dataService = DataService()
     
-    fileprivate(set) var NAME_FROM_OUTPAN = ""
+    private(set) var NAME_FROM_OUTPAN = ""
     
     static func searchAPI(codeNumber: String) {
         
@@ -29,7 +29,7 @@ class DataService {
                 
                 self.dataService.NAME_FROM_OUTPAN = gameName
                 
-                // Post a notification to let GameDetailsViewController know we have some data.
+                // Post a notification to let AddGameViewController know we have some data.
                 NotificationCenter.default.post(name: Notification.Name(rawValue: "NameNotification"), object: nil)
         }
     }
