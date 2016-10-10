@@ -201,6 +201,7 @@
 				73703EC41D91C26800C0BE9D /* Resources */,
 				EA22F2A1C356FA8E4873D8FE /* [CP] Embed Pods Frameworks */,
 				453829CDF37D95762F81F4DD /* [CP] Copy Pods Resources */,
+				73ABB06A1DABFD7A00D15FEE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -353,6 +354,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhatBoardGame/Pods-WhatBoardGame-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		73ABB06A1DABFD7A00D15FEE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 1bb2b07d06b6795b73376798080c5ce2186f3ff0 97ccc86f6fe43c5292f9979646042a0ea1dc7ee5791803c27e511273031a9281";
 		};
 		EA22F2A1C356FA8E4873D8FE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
