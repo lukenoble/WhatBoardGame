@@ -81,6 +81,7 @@ class EditCollectionViewController : UIViewController, UITableViewDataSource, UI
         if (segue.identifier == "editGameSegue") {
             if let dest = segue.destination as? AddGameViewController {
                 dest.gameToEdit = gameToEdit
+                dest.editMode = true
             }
         }
     }

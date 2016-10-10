@@ -150,7 +150,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G1b-4N-4wt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-229.59999999999999" y="262.21889055472263"/>
+            <point key="canvasLocation" x="-185" y="278"/>
         </scene>
         <!--Results View Controller-->
         <scene sceneID="kv1-Xo-j44">
@@ -314,7 +314,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Add game" id="sHk-6I-2MK">
                             <connections>
-                                <segue destination="97a-T3-UDc" kind="show" id="3Hh-C4-04u"/>
+                                <segue destination="97a-T3-UDc" kind="show" identifier="addGameSegue" id="3Hh-C4-04u"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -331,7 +331,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="3Hh-C4-04u"/>
         <segue reference="eH7-Li-5FG"/>
-        <segue reference="6tJ-Qg-g2H"/>
     </inferredMetricsTieBreakers>
 </document>

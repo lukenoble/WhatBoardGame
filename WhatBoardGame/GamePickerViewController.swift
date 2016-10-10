@@ -52,5 +52,10 @@ class GamePickerViewController : UIViewController {
                 dest.maxTime = maxTime
             }
         }
+        if (segue.identifier == "addGameSegue") {
+            if let dest = segue.destination as? AddGameViewController {
+                dest.editMode = false
+            }
+        }
     }
 }

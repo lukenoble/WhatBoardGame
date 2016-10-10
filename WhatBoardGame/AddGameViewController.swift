@@ -13,6 +13,7 @@ import CoreData
 class AddGameViewController : UIViewController {
     
     var gameToEdit = [NSManagedObject]()
+    var editMode = false
     
     //MARK: UI Elements
     @IBOutlet weak var gameTitleTextField: UITextField!
@@ -22,15 +23,21 @@ class AddGameViewController : UIViewController {
     @IBOutlet weak var barcodeTextField: UITextField!
     @IBAction func addToCollectionButton(_ sender: AnyObject) {
         saveGame()
+
         self.performSegue(withIdentifier: "addToCollectionSegue", sender: self)
     }
     
     //MARK: Save Data
     func saveGame() {
+        var gameToSave : NSManagedObject
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
         let entity =  NSEntityDescription.entity(forEntityName: "GameInCollection", in:managedContext)
-        let gameToSave = NSManagedObject(entity: entity!, insertInto: managedContext)
+        if editMode == false {
+            gameToSave = NSManagedObject(entity: entity!, insertInto: managedContext)
+        } else {
+            gameToSave = gameToEdit[0]
+        }
         gameToSave.setValue(gameTitleTextField.text!, forKey: "gametitle")
         gameToSave.setValue(Int(minPlayersTextField.text!), forKey: "minplayers")
         gameToSave.setValue(Int(maxPlayersTextField.text!), forKey: "maxplayers")
