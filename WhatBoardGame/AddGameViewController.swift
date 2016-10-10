@@ -23,7 +23,6 @@ class AddGameViewController : UIViewController {
     @IBOutlet weak var barcodeTextField: UITextField!
     @IBAction func addToCollectionButton(_ sender: AnyObject) {
         saveGame()
-
         self.performSegue(withIdentifier: "addToCollectionSegue", sender: self)
     }
     

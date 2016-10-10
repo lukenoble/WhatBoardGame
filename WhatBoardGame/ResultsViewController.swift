@@ -10,12 +10,32 @@ import Foundation
 import UIKit
 import CoreData
 
-class ResultsViewController : UIViewController {
+class ResultsViewController : UIViewController, UITableViewDataSource {
     var games = [NSManagedObject]()
     var numberOfPlayersPicked : Int = 1
     var minTime : Int = 0
     var maxTime : Int = 30
     @IBOutlet weak var whatGameLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return games.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
+        
+        let game = games[(indexPath as NSIndexPath).row]
+        let name = game.value(forKey: "gametitle") as? String
+        print(games)
+        cell!.textLabel!.text = "\(name!)"
+        
+        return cell!
+    }
+    override func viewDidLoad() {
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -30,11 +50,11 @@ class ResultsViewController : UIViewController {
         let maxPlayersPredicate = NSPredicate(format: "%K >= %D", maxPlayers, numberOfPlayers)
         let minTimePredicate = NSPredicate(format: "%K >= %D", gameTime, minTimeForPredicate)
         let maxTimePredicate = NSPredicate(format: "%K <= %D", gameTime, maxTimeForPredicate)
-        let andPredicate = NSCompoundPredicate.init(andPredicateWithSubpredicates: [minPlayersPredicate, maxPlayersPredicate, minTimePredicate, maxTimePredicate])
+        let completePredicate = NSCompoundPredicate.init(andPredicateWithSubpredicates: [minPlayersPredicate, maxPlayersPredicate, minTimePredicate, maxTimePredicate])
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "GameInCollection")
-        fetchRequest.predicate = andPredicate
+        fetchRequest.predicate = completePredicate
         do {
             let results =
                 try managedContext.fetch(fetchRequest)
