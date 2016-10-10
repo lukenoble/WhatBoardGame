@@ -10,10 +10,11 @@ import Foundation
 import UIKit
 import CoreData
 
-class EditCollectionViewController : UIViewController, UITableViewDataSource {
+class EditCollectionViewController : UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     var games = [NSManagedObject]()
+    var gameToEdit = [NSManagedObject]()
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return games.count
@@ -50,9 +51,10 @@ class EditCollectionViewController : UIViewController, UITableViewDataSource {
             }
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
     }
     
@@ -68,6 +70,18 @@ class EditCollectionViewController : UIViewController, UITableViewDataSource {
             games = results as! [NSManagedObject]
         } catch let error as NSError {
             print("Could not fetch \(error), \(error.userInfo)")
+        }
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        gameToEdit = [games[indexPath.row]]
+        performSegue(withIdentifier: "editGameSegue", sender: self)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "editGameSegue") {
+            if let dest = segue.destination as? AddGameViewController {
+                dest.gameToEdit = gameToEdit
+            }
         }
     }
 }

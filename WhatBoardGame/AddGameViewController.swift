@@ -12,6 +12,8 @@ import CoreData
 
 class AddGameViewController : UIViewController {
     
+    var gameToEdit = [NSManagedObject]()
+    
     //MARK: UI Elements
     @IBOutlet weak var gameTitleTextField: UITextField!
     @IBOutlet weak var minPlayersTextField: UITextField!
@@ -48,7 +50,13 @@ class AddGameViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
-    
+        if gameToEdit.count > 0 {
+            gameTitleTextField.text = "\(gameToEdit[0].value(forKey: "gametitle")!)"
+            minPlayersTextField.text = "\(gameToEdit[0].value(forKey: "minplayers")!)"
+            maxPlayersTextField.text = "\(gameToEdit[0].value(forKey: "maxplayers")!)"
+            averagePlaytimeTextField.text = "\(gameToEdit[0].value(forKey: "averageplaytime")!)"
+            barcodeTextField.text = "\(gameToEdit[0].value(forKey: "barcode")!)"
+        }
         NotificationCenter.default.addObserver(self, selector: #selector(setLabels), name: Notification.Name(rawValue: "NameNotification"), object: nil)
     }
 
