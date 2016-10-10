@@ -23,14 +23,10 @@ class ResultsViewController : UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
-        
         let game = games[(indexPath as NSIndexPath).row]
         let name = game.value(forKey: "gametitle") as? String
-        print(games)
         cell!.textLabel!.text = "\(name!)"
-        
         return cell!
     }
     override func viewDidLoad() {
