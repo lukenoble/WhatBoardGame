@@ -44,7 +44,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0AD1D3C8C16E3B01F7FBB1FD /* Pods-WhatBoardGameTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatBoardGameTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhatBoardGameTests/Pods-WhatBoardGameTests.debug.xcconfig"; sourceTree = "<group>"; };
 		11DA115FAAA7BB93883B4862 /* Pods-WhatBoardGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatBoardGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhatBoardGame/Pods-WhatBoardGame.release.xcconfig"; sourceTree = "<group>"; };
 		6B864209FCDFB21D18805D3F /* Pods_WhatBoardGameTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatBoardGameTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7311A38E1D9BDD7B0099D156 /* GamePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePickerViewController.swift; sourceTree = "<group>"; };
@@ -69,12 +68,9 @@
 		73703EEE1D91C26800C0BE9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73703EFA1D91C75200C0BE9D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		73BF95841D9EB81B00D6F4CA /* AddGameViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGameViewControllerTests.swift; sourceTree = "<group>"; };
-		91803A2801C9BEBCADFB081E /* Pods-WhatBoardGameUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatBoardGameUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhatBoardGameUITests/Pods-WhatBoardGameUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9C7EA3788BF2DE2FE20802B7 /* Pods-WhatBoardGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatBoardGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhatBoardGame/Pods-WhatBoardGame.debug.xcconfig"; sourceTree = "<group>"; };
 		A67FC69B42ABDB0011E5DE7F /* Pods_WhatBoardGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatBoardGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A82EB2A365E34343887294C5 /* Pods_WhatBoardGameUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatBoardGameUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF904C3FBA3E6A281962D24E /* Pods-WhatBoardGameTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatBoardGameTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhatBoardGameTests/Pods-WhatBoardGameTests.release.xcconfig"; sourceTree = "<group>"; };
-		E3DA8C7B56BE69118736EB23 /* Pods-WhatBoardGameUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatBoardGameUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhatBoardGameUITests/Pods-WhatBoardGameUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,10 +104,6 @@
 			children = (
 				9C7EA3788BF2DE2FE20802B7 /* Pods-WhatBoardGame.debug.xcconfig */,
 				11DA115FAAA7BB93883B4862 /* Pods-WhatBoardGame.release.xcconfig */,
-				0AD1D3C8C16E3B01F7FBB1FD /* Pods-WhatBoardGameTests.debug.xcconfig */,
-				AF904C3FBA3E6A281962D24E /* Pods-WhatBoardGameTests.release.xcconfig */,
-				E3DA8C7B56BE69118736EB23 /* Pods-WhatBoardGameUITests.debug.xcconfig */,
-				91803A2801C9BEBCADFB081E /* Pods-WhatBoardGameUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
